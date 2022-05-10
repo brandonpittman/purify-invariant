@@ -1,0 +1,19 @@
+lockfileVersion: 5.4
+
+specifiers:
+  purify-ts: ^1.2.0
+
+devDependencies:
+  purify-ts: 1.2.0
+
+packages:
+
+  /@types/json-schema/7.0.9:
+    resolution: {integrity: sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==}
+    dev: true
+
+  /purify-ts/1.2.0:
+    resolution: {integrity: sha512-CTiMFDCaJ9vKXOnl13sRktbb6KMYB0NuQD0LPUYfEZO5YIKcN7uxIb7maSe0Ywzcm9O8LDcz7dQK1p6ZWDCvaQ==}
+    dependencies:
+      '@types/json-schema': 7.0.9
+    dev: true

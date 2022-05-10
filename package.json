@@ -1,0 +1,30 @@
+{
+  "name": "purify-invariant",
+  "version": "0.0.1",
+  "description": "An invariant utility for use alongside purify-ts.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonpittman/purify-invariant.git"
+  },
+  "keywords": [
+    "typescript",
+    "purify-ts",
+    "invariant"
+  ],
+  "author": "Brandon Pittman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandonpittman/purify-invariant/issues"
+  },
+  "homepage": "https://github.com/brandonpittman/purify-invariant#readme",
+  "devDependencies": {
+    "purify-ts": "^1.2.0"
+  },
+  "peerDependencies": {
+    "purify-ts": "^1.2.0"
+  }
+}
