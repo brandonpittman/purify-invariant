@@ -15,6 +15,9 @@
     "purify-ts",
     "invariant"
   ],
+  "files": [
+    "build"
+  ],
   "author": "Brandon Pittman",
   "license": "MIT",
   "bugs": {
