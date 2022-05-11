@@ -8,5 +8,10 @@ What is fun about this package now, is that you can pass a `strategy` param to t
 
 ```ts
 // Unlike tiny-invariant, the error message is required.
-invariant(1 > 2, "Condition check failed", "warn")
+invariant(1 > 2); // will throw an error
+
+// Okay
+invariant(1 > 2, "Condition check failed");
+
+invariant(1 > 2, "Condition check failed", "warn");
 ```
