@@ -22,7 +22,7 @@
   ],
   "types": "build/index.d.ts",
   "nano-staged": {
-    "*.{json,js,ts}": "prettier --write",
+    "*.{md,json,js,ts}": "prettier --write",
     "*.ts": "eslint --fix src"
   },
   "simple-git-hooks": {
