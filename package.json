@@ -5,7 +5,6 @@
   "main": "build/index.js",
   "scripts": {
     "build": "tsc --esModuleInterop -d src/index.ts --outDir build",
-    "lint": "eslint --fix src",
     "postinstall": "pnpx simple-git-hooks",
     "prepublishOnly": "pnpm run build"
   },
@@ -23,11 +22,11 @@
   ],
   "types": "build/index.d.ts",
   "nano-staged": {
-    "*.{json,js,ts}": "prettier --write"
+    "*.{json,js,ts}": "prettier --write",
+    "*.ts": "eslint --fix src"
   },
   "simple-git-hooks": {
-    "pre-commit": "./node_modules/.bin/nano-staged",
-    "pre-push": "pnpm run lint"
+    "pre-commit": "./node_modules/.bin/nano-staged"
   },
   "author": "Brandon Pittman",
   "license": "MIT",
