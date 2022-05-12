@@ -1,10 +1,14 @@
-import { identity } from "purify-ts/Function";
+import { identity, curry } from "purify-ts/Function";
 import { Maybe } from "purify-ts/Maybe";
-
 type Invariant = (
   cond: unknown,
   message: string,
   strategy?: Strategy
+) => asserts cond;
+type InvariantCurried = (
+  strategy: Strategy,
+  message: string,
+  cond: unknown
 ) => asserts cond;
 type Strategy = "log" | "warn" | "error" | "throw";
 
@@ -41,3 +45,25 @@ export const invariant: Invariant = (cond, message, strategy = "throw") => {
 };
 
 export const assert = invariant;
+
+const invariantUncurried: InvariantCurried = (strategy, message, cond) => {
+  assertString(message);
+
+  return Maybe.fromFalsy(cond).caseOf({
+    Nothing: () => {
+      switch (strategy) {
+        case "log":
+          return console.log(message);
+        case "warn":
+          return console.warn(message);
+        case "error":
+          return console.error(message);
+        default:
+          throw new Error(message);
+      }
+    },
+    Just: identity,
+  });
+};
+
+export const invariantCurried = curry(invariantUncurried);
