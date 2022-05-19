@@ -1,5 +1,5 @@
-import { identity, curry } from "purify-ts/Function";
-import { Maybe } from "purify-ts/Maybe";
+import { identity, curry } from "purify-ts/Function.js";
+import { Maybe } from "purify-ts/Maybe.js";
 type Invariant = (
   cond: unknown,
   message: string,
