@@ -1,6 +1,6 @@
 {
   "name": "purify-invariant",
-  "version": "0.0.12-0",
+  "version": "0.0.12-1",
   "description": "An invariant utility for use alongside purify-ts.",
   "type": "module",
   "source": "./src/index.ts",
