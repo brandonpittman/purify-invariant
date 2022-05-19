@@ -3,16 +3,18 @@
   "version": "0.0.12-1",
   "description": "An invariant utility for use alongside purify-ts.",
   "type": "module",
-  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "require": "./build/index.cjs",
-    "default": "./build/index.modern.js"
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "main": "./build/index.cjs",
-  "module": "./build/index.module.js",
-  "unpkg": "./build/index.umd.js",
   "scripts": {
-    "build": "microbundle",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "prepublishOnly": "npm run build",
     "test": ""
   },
@@ -28,7 +30,6 @@
   "files": [
     "build"
   ],
-  "types": "build/index.d.ts",
   "nano-staged": {
     "*.{md,json,js,ts}": "prettier --write",
     "*.ts": "eslint --fix src"
@@ -51,6 +52,7 @@
     "prettier": "^2.6.2",
     "purify-ts": "^1.2.0",
     "simple-git-hooks": "^2.7.0",
+    "tsup": "^5.12.8",
     "typescript": "^4.6.4"
   },
   "peerDependencies": {
