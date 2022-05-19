@@ -13,8 +13,8 @@
     "declaration": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "target": "es5",
-    "lib": ["dom", "es2015"],
+    "target": "esnext",
+    "lib": ["dom", "esnext"],
     "jsx": "react",
     "moduleResolution": "node",
     "outDir": "build"
