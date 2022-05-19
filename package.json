@@ -1,6 +1,6 @@
 {
   "name": "purify-invariant",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "An invariant utility for use alongside purify-ts.",
   "main": "build/index.js",
   "scripts": {
