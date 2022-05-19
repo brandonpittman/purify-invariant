@@ -1,5 +1,4 @@
-import { identity, curry } from "purify-ts/Function";
-import { Maybe } from "purify-ts/Maybe";
+import { identity, curry, Maybe } from "purify-ts";
 type Invariant = (
   cond: unknown,
   message: string,
