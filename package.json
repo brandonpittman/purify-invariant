@@ -5,8 +5,8 @@
   "main": "build/index.js",
   "scripts": {
     "build": "tsc --esModuleInterop -d src/index.ts --outDir build",
-    "postinstall": "pnpx simple-git-hooks",
-    "prepublishOnly": "pnpm run build"
+    "prepare": "npx simple-git-hooks",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
