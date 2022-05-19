@@ -1,20 +1,11 @@
 {
   "name": "purify-invariant",
-  "type": "module",
   "version": "0.0.3",
   "description": "An invariant utility for use alongside purify-ts.",
-  "main": "dist/index.js",
-  "source": "src/index.ts",
-  "exports": {
-    "require": "./dist/index.cjs",
-    "default": "./dist/index.modern.js"
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.module.js",
-  "unpkg": "./dist/index.umd.js",
+  "main": "build/index.js",
   "scripts": {
-    "build": "microbundle",
-    "watch": "microbundle watch",
+    "build": "tsc --esModuleInterop -d src/index.ts --outDir build",
+    "postinstall": "pnpx simple-git-hooks",
     "prepublishOnly": "pnpm run build"
   },
   "repository": {
@@ -27,9 +18,9 @@
     "invariant"
   ],
   "files": [
-    "dist"
+    "build"
   ],
-  "types": "dist/index.d.ts",
+  "types": "build/index.d.ts",
   "nano-staged": {
     "*.{md,json,js,ts}": "prettier --write",
     "*.ts": "eslint --fix src"
@@ -47,7 +38,6 @@
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "eslint": "^8.15.0",
-    "microbundle": "^0.15.0",
     "nano-staged": "^0.8.0",
     "prettier": "^2.6.2",
     "purify-ts": "^1.2.0",
