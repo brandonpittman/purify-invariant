@@ -2,6 +2,7 @@
   "name": "purify-invariant",
   "version": "0.0.6",
   "description": "An invariant utility for use alongside purify-ts.",
+  "type": "module",
   "main": "build/index.js",
   "scripts": {
     "build": "tsc",
