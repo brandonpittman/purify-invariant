@@ -1,11 +1,10 @@
 {
   "name": "purify-invariant",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "An invariant utility for use alongside purify-ts.",
   "main": "build/index.js",
   "scripts": {
-    "build": "tsc --esModuleInterop -d src/index.ts --outDir build",
-    "prepare": "npx simple-git-hooks",
+    "build": "tsc",
     "prepublishOnly": "npm run build"
   },
   "repository": {
