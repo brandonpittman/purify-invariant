@@ -28,7 +28,7 @@
     "invariant"
   ],
   "files": [
-    "build"
+    "dist"
   ],
   "nano-staged": {
     "*.{md,json,js,ts}": "prettier --write",
