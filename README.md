@@ -5,10 +5,8 @@ purify-ts. The condition assert uses Purify's `Maybe.fromFalsy`. This could be
 seen as total overkill, but it leaves room to add interesting stuff in the
 future.
 
-What is fun about this package now, is that you can pass a `strategy` param to
-the `invariant` function of `"throw" | "log" | "warn" | "error"`. `throw` is
-the default but if you just want to use `console.${strategy}`, it's easy to
-switch up.
+1. You can pass a `strategy` param to the `invariant` function of `"throw" | "log" | "warn" | "error"`. `throw` is the default but if you just want to use `console.${strategy}`, it's easy to switch up.
+2. You can import a curried version and thanks to reversed argument order, you can create more reusable and configurable invariants. (See <a href="#curried">curried example</a>.)
 
 ## Install
 
@@ -30,7 +28,7 @@ invariant(1 > 2, "Condition check failed");
 invariant(1 > 2, "Condition check failed", "warn");
 ```
 
-## Curried Example
+<h2 id="curried">Curried Example</h2>
 
 ```ts
 import { invariantCurried } from "purify-invariant"
