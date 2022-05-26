@@ -16,7 +16,7 @@ switch up.
 npm install purify-invariant
 ```
 
-## Example
+## Uncurried Example
 
 ```ts
 // Unlike tiny-invariant, the error message is required.
@@ -26,4 +26,14 @@ invariant(1 > 2); // will throw an error
 invariant(1 > 2, "Condition check failed");
 
 invariant(1 > 2, "Condition check failed", "warn");
+```
+
+## Curried Example
+
+```ts
+import { invariantCurried } from "purify-invariant"
+
+let oops = invariantCurried("throw")
+let ohNo = oops("Oh no!")
+ohNo(1 > 2) // throw new Error("Oh now!")
 ```
