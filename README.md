@@ -18,3 +18,19 @@ import { invariant } from "purify-invariant"
 
 // Unlike tiny-invariant, the error message is required.
 invariant(1 > 2); // TypeScript will complain
+
+// Okay
+invariant(1 > 2, "Condition check failed");
+
+invariant(1 > 2, "Condition check failed", "warn");
+```
+
+<h2 id="curried">Curried Example</h2>
+
+```ts
+import { invariantCurried } from "purify-invariant"
+
+let oops = invariantCurried("throw")
+let ohNo = oops("Oh no!")
+ohNo(1 > 2) // throw new Error("Oh now!")
+```
