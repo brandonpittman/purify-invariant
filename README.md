@@ -19,6 +19,8 @@ npm install purify-invariant
 ## Uncurried Example
 
 ```ts
+import { invariant } from "purify-invariant"
+
 // Unlike tiny-invariant, the error message is required.
 invariant(1 > 2); // will throw an error
 
